@@ -27,7 +27,7 @@
         <Label Content="Last Name:" Grid.Row="2"></Label>
         <TextBox Width="250" Grid.Row="2" Text="{Binding LastName, Mode=TwoWay}"></TextBox>
         <Label Content="Full Name:" Grid.Row="3"></Label>
-        <TextBox Width="250" Grid.Row="3" Text="{Binding FullName, Mode=TwoWay}"></TextBox>
+        <TextBlock Width="250" Grid.Row="3" Text="{Binding FullName, Mode=OneWay}"></TextBlock>
 
     </Grid>
 </Window>

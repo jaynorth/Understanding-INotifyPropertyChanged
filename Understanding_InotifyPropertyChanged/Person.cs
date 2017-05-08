@@ -21,6 +21,7 @@ namespace Understanding_InotifyPropertyChanged
             get { return _fullName = _firstName +" " + _lastName; }
             set { _fullName = value;
                 OnPropertychanged("FullName");
+       
             }
         }
 
