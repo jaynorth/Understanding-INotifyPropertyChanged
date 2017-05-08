@@ -23,6 +23,13 @@ namespace Understanding_InotifyPropertyChanged
         public MainWindow()
         {
             InitializeComponent();
+
+            Person p = new Person()
+            {
+                FirstName="Bruce", LastName="Willis"
+            };
+
+            this.DataContext = p;
         }
     }
 }

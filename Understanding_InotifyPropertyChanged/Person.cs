@@ -29,6 +29,7 @@ namespace Understanding_InotifyPropertyChanged
             get { return _lastName; }
             set { _lastName = value;
                 OnPropertychanged("LastName");
+                OnPropertychanged("FullName");
             }
         }
 
@@ -38,6 +39,7 @@ namespace Understanding_InotifyPropertyChanged
             get { return _firstName; }
             set { _firstName = value;
                 OnPropertychanged("FirstName");
+                OnPropertychanged("FullName");
             }
         }
 
