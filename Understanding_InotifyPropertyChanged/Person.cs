@@ -19,23 +19,35 @@ namespace Understanding_InotifyPropertyChanged
         public string FullName
         {
             get { return _fullName = _firstName +" " + _lastName; }
-            set { _fullName = value; }
+            set { _fullName = value;
+                OnPropertychanged("FullName");
+            }
         }
 
         public string LastName
         {
             get { return _lastName; }
-            set { _lastName = value; }
+            set { _lastName = value;
+                OnPropertychanged("LastName");
+            }
         }
 
 
         public string FirstName
         {
             get { return _firstName; }
-            set { _firstName = value; }
+            set { _firstName = value;
+                OnPropertychanged("FirstName");
+            }
         }
 
-
+        private void OnPropertychanged(string property)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
+            }
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
     }
