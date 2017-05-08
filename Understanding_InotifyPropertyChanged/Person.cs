@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Understanding_InotifyPropertyChanged
 {
-    public class Person
+    public class Person : INotifyPropertyChanged
     {
 
         private string _firstName;
         private string _lastName;
         private string _fullName;
+
+        
 
         public string FullName
         {
@@ -31,6 +34,9 @@ namespace Understanding_InotifyPropertyChanged
             get { return _firstName; }
             set { _firstName = value; }
         }
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
     }
 }
